@@ -1,0 +1,112 @@
+// Define color variables based on the style guide
+$color-dark-cyan: hsl(185, 75%, 39%);
+$color-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$color-dark-grayish-blue: hsl(227, 10%, 46%);
+$color-dark-gray: hsl(0, 0%, 59%);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+// Base styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    background-color: $color-dark-cyan;
+    background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.profile-card {
+    margin: 7%;
+    border-radius: 5%;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.profile-header {
+    background-image: url('images/bg-pattern-card.svg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+
+    .profile-image {
+        margin-bottom: -70%;
+
+        img {
+            border-radius: 50%;
+            border: 5px solid white;
+            width: auto;
+        }
+    }
+}
+
+.profile-info {
+    text-align: center;
+    padding: 20% 10% 10%;
+
+
+    .age .city {
+        color: $color-dark-gray;
+    }
+
+    .age {
+        font-weight: 500;
+        opacity: 0.7;
+    }
+
+    .city {
+        font-weight: 100;
+        font-size: small;
+        opacity: 0.6;
+        padding-top: 2%;
+    }
+}
+
+hr {
+    opacity: 0.3;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10%;
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // border-top: 1px solid $color-dark-gray;
+
+        h2 {
+            font-size: medium;
+        }
+
+        p {
+            font-size: smaller;
+            color: $color-dark-gray;
+        }
+    }
+}
+
+
+@media(min-width : 1024px) {
+    .profile-card {       
+        width: 25%;     
+    }
+}
